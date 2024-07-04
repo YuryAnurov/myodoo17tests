@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+background_required.access_model_test,access_model_test,background_required.model_model_test,base.group_user,1,1,1,1
+background_required.access_related_model,access_related_model,background_required.model_related_model,base.group_user,1,1,1,1

@@ -1,0 +1,33 @@
+<odoo>
+  <data>
+    <record id="view_form_with_background_widget" model="ir.ui.view">
+        <field name="name">form.with.background.widget</field>
+        <field name="model">model.test</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="required_field_ids"/>
+                    <field name="char_field" widget="background_required"/>
+                    <field name="text_field" widget="background_required"/>
+                    <field name="integer_field" widget="background_required"/>
+                    <field name="float_field" widget="background_required"/>
+                    <field name="many2one_field" widget="background_required"/>
+                    <field name="many2many_field" widget="background_required"/>
+                    <field name="one2many_field" widget="background_required"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_model_test" model="ir.actions.act_window">
+        <field name="name">Model Test</field>
+        <field name="res_model">model.test</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_model_test_root" name="Model Test" sequence="10"/>
+    <menuitem id="menu_model_test" name="Model Test" parent="menu_model_test_root" action="action_model_test" sequence="10"/>
+
+
+  </data>
+</odoo>
